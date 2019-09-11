@@ -5,8 +5,17 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "@progress/kendo-react-inputs": "^3.3.0",
+    "@progress/kendo-react-intl": "^3.3.0",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "rc-progress": "^2.5.2",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "reactstrap": "^8.0.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

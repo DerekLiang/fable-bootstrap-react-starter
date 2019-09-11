@@ -1,5 +1,10 @@
 var path = require("path");
 
+const isProduction = process.argv.indexOf("-p") >= 0;
+console.log(
+    "Bundling for " + (isProduction ? "production" : "development") + "..."
+);
+
 module.exports = {
     mode: "development",
     entry: "./src/App.fsproj",
@@ -15,6 +20,14 @@ module.exports = {
         rules: [{
             test: /\.fs(x|proj)?$/,
             use: "fable-loader"
+        },
+        {
+            test: /\.(scss|css)$/,
+            use: [
+            isProduction ? MiniCssExtractPlugin.loader : "style-loader",
+            "css-loader",
+            "sass-loader"
+            ]
         }]
     }
 }
